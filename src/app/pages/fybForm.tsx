@@ -77,10 +77,10 @@ const formDetails: {
     placeholder: " Enter name of lecturer",
   },
   {
-    label: "Alternate Course",
+    label: "If not marine, what else?",
     name: "alternateCourse",
     type: "text",
-    placeholder: " Enter course title",
+    placeholder: " Enter course name",
   },
   {
     label: "what will you miss most",
@@ -504,7 +504,8 @@ downloadImage()
         </footer>
       </div>
 
-      <div className=" absolute left-[-9999px]">
+      <div>
+        {/* className=" absolute left-[-9999px]" */}
         <div
           ref={posterRef}
           className=" bg-[url('/images/fybBackground.png')]       w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 "
@@ -528,7 +529,7 @@ downloadImage()
 
             <div className=" grid  grid-cols-2 gap-3">
               <div>
-                <div className="bg-gradient-to-r from-[#003366] to-[#000337] min-h-[300px] rounded-md">
+                <div className="bg-gradient-to-r from-[#003366] to-[#000337] h-[275px] rounded-md">
                   <div className="  flex items-center justify-center">
                     {previewImage !== "" && (
                       <Image
@@ -536,18 +537,18 @@ downloadImage()
                         alt=""
                         width={100}
                         height={300}
-                        className=" p-2  max-h-[300px] object-fill w-full"
+                        className=" p-2  max-h-[300px] object-cotain w-full"
                       />
                     )}
                   </div>
                   <GradBox
-                    styling="border-0 p-0 mb-0"
+                    styling="border-0 p-0 mb-0 bg-none h-0"
                     stylingLabel="inline mr-4"
                     label={formDetails[0].label}
                     value={allValues?.details.name}
                   />
                   <GradBox
-                    styling="border-0 p-0 "
+                    styling="border-0 pb-[1px]  bg-none h-0"
                     stylingLabel="inline mr-4"
                     label={formDetails[1].label}
                     value={allValues?.details.alias}
@@ -555,7 +556,7 @@ downloadImage()
                 </div>
                 <div>
                   <GradBox
-                    styling="my-5"
+                    styling="my-[14px]"
                     label={formDetails[2].label}
                     value={allValues?.details.dob}
                   />
