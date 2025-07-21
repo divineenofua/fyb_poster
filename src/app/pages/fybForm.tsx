@@ -37,7 +37,7 @@ const formDetails: {
   {
     label: "DOB",
     name: "dob",
-    type: "date",
+    type: "text",
     placeholder: " Enter date of birth",
   },
   {
@@ -65,28 +65,28 @@ const formDetails: {
     placeholder: " Enter text",
   },
   {
-    label: "course",
+    label: "Favorite course",
     name: "course",
     type: "text",
-    placeholder: " Enter text of birth",
+    placeholder: " Enter Favorite course",
   },
   {
-    label: "lecturer",
+    label: "Favorite lecturer",
     name: "lecturer",
     type: "text",
-    placeholder: " Enter text of birth",
+    placeholder: " Enter name of lecturer",
   },
   {
     label: "Alternate Course",
     name: "alternateCourse",
     type: "text",
-    placeholder: " Enter date of birth",
+    placeholder: " Enter course title",
   },
   {
     label: "what will you miss most",
     name: "missMost",
     type: "text",
-    placeholder: " Enter date of birth",
+    placeholder: "Enter answer",
   },
   {
     label: "Class clique",
