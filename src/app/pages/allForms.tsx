@@ -3,9 +3,7 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../store/fireStore";
 import { FormData } from "../schemas/schema";
-import { set } from "zod";
-import Image from "next/image";
-
+ 
 const AllForms = () => {
   const [data, setData] = useState<FormData[]>();
 
