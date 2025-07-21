@@ -238,7 +238,7 @@ downloadImage()
                         <div className="my-2 mb-4 flex items-center justify-center">
                           <button
                             onClick={() => inputRef.current?.click()}
-                            className="bg-white p-1 rounded-sm"
+                            className="bg-white p-1 text-[#000337] rounded-sm"
                           >
                             Upload image
                           </button>
@@ -498,7 +498,7 @@ downloadImage()
           {/* preview image */}
         </div>
 
-        <footer className="text-[#000337]  py-3  text-center ">
+        <footer className="text-[#000337]  py-3  font-bold text-center ">
           {" "}
           Mariners!!! Ahoy!!!
         </footer>
@@ -630,7 +630,7 @@ downloadImage()
             </div>
           </div>
 
-          <footer className="text-[#000337]  py-3  text-center ">
+          <footer className="text-[#000337]  py-3 font-bold  text-center ">
             {" "}
             Mariners!!! Ahoy!!!
           </footer>
