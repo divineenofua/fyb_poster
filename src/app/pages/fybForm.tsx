@@ -172,7 +172,7 @@ const FybForm = () => {
     
     const [preview, setPreview] = useState(false);
     const onSubmit = async (data: FormData) => {
-      // alert("✅ Goals saved successfully");
+      alert("✅ submitted saved successfully");
 //      try{
 //  const docRef = await addDoc(collection(db, 'fybData'), data)
 //  console.log('doc added with', docRef.id)
