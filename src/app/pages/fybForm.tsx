@@ -188,7 +188,7 @@ downloadImage()
   return (
     <div className=" sm:m-7 my-7 mb-26">
       <div className=" bg-[url('/images/fybBackground.png')]  rounded-2xl    max-w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 ">
-        <div className="  border-2 border-dotted px-3 sm:px-7 rounded-2xl">
+        <div className="  border-2 border-[#000337] border-dotted px-3 sm:px-7 rounded-2xl">
           <div className="    ">
             <div className=" flex justify-center gap-10 items-center pb-3 px-4 my-5  ">
               <div className="  max-w-[500px]">
@@ -219,7 +219,7 @@ downloadImage()
                               src={previewImage}
                               alt=""
                               width={100}
-                              height={300}
+                              height={200}
                               className=" p-2 object-fill w-full"
                             />
                           ) : (
@@ -509,7 +509,7 @@ downloadImage()
           ref={posterRef}
           className=" bg-[url('/images/fybBackground.png')]       w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 "
         >
-          <div className="  border-2 border-dotted px-3 sm:px-7 rounded-2xl">
+          <div className="  border-2 border-dotted border-[#000337] px-3 sm:px-7 rounded-2xl">
             <div className="    ">
               <div className=" flex justify-center gap-10 items-center pb-3 px-4 my-5  ">
                 <div className="  max-w-[500px]">
