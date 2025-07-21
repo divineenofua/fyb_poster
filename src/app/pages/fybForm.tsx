@@ -187,7 +187,7 @@ downloadImage()
     }
   return (
     <div className=" sm:m-7 my-7 mb-26">
-      <div className=" bg-[url('/images/fybBackground.png')]     max-w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 ">
+      <div className=" bg-[url('/images/fybBackground.png')]  rounded-2xl    max-w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 ">
         <div className="  border-2 border-dotted px-3 sm:px-7 rounded-2xl">
           <div className="    ">
             <div className=" flex justify-center gap-10 items-center pb-3 px-4 my-5  ">
@@ -481,7 +481,7 @@ downloadImage()
               </button>
 
               <button
-              type='button'
+                type="button"
                 onClick={() => setPreview((prev) => !prev)}
                 disabled={!allFilled}
                 className={`  bg-[#0891b2] text-[#000337]  p-2 text-center rounded-lg cursor-pointer hover:[#0e7490] ${
@@ -498,15 +498,13 @@ downloadImage()
           {/* preview image */}
         </div>
 
-        <footer className="text-[000337]  py-3  text-center ">
+        <footer className="text-[#000337]  py-3  text-center ">
           {" "}
           Mariners!!! Ahoy!!!
         </footer>
       </div>
 
-     
-
-      <div className=' absolute left-[-9999px]'>
+      <div className=" absolute left-[-9999px]">
         <div
           ref={posterRef}
           className=" bg-[url('/images/fybBackground.png')]       w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 "
@@ -632,7 +630,7 @@ downloadImage()
             </div>
           </div>
 
-          <footer className="text-[000337]  py-3  text-center ">
+          <footer className="text-[#000337]  py-3  text-center ">
             {" "}
             Mariners!!! Ahoy!!!
           </footer>
