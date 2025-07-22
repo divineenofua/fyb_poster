@@ -10,16 +10,18 @@ const GradBox: React.FC<props> = (props)  => {
   return (
     <div>
       <div
-        className={` bg-gradient-to-r from-[#003366] pb-[2px]  to-[#000337]  px-3 rounded-sm  border border-[#277fd6]  border-dotted h-[51px] ${props.styling}`}
+        className={` bg-gradient-to-r from-[#003366] flex item-center  to-[#000337]  px-3 rounded-sm  border border-[#277fd6]  border-dotted h-[51px] ${props.styling}`}
       >
-        <div
-          className={`pb-[2px]    text-[#0891b2]  capitalize text-sm mb-[1px]   ${props.stylingLabel}`}
-        >
-          {props.label}
-        </div>
-        <div className="pb-2 text-white   overflow-clip  text-sm outline-0 focus:border  rounded-md  capitalize">
-          {" "}
-          {props.value}
+        <div className=' flex  flex-col   items-start'>
+          <div
+            className={`text-[#0891b2]  p-0 m-0 capitalize text-sm   ${props.stylingLabel}`}
+          >
+            {props.label}
+          </div>
+          <div className="text-white   text-sm outline-0   rounded-md  capitalize ">
+            {" "}
+            {props.value}
+          </div>
         </div>
       </div>
     </div>
