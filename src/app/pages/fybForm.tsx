@@ -138,8 +138,7 @@ const FybForm = () => {
         scale: 2,
       });
 
-      console.log('download')
-
+ 
       const imgData = canvas.toDataURL("image/png");
       const link = document.createElement("a");
       link.href = imgData;
@@ -392,14 +391,14 @@ downloadImage()
               <div className=" grid  grid-cols-2 items-stretch gap-3">
                 <div>
                   <div className="bg-gradient-to-r from-[#003366] to-[#000337] min-h-[300px] rounded-md">
-                    <div className="  flex items-center justify-center">
-                      {previewImage !== "" && (
+                    <div className="w-full h-[200px] flex items-center justify-center">
+                      {previewImage && (
                         <Image
                           src={allValues.details.image}
                           alt=""
-                          width={100}
-                          height={300}
-                          className=" p-2  max-h-[300px] object-fill w-full"
+                          width={1000}
+                          height={200}
+                          className="object-cover  h-[200px] p-2"
                         />
                       )}
                     </div>
@@ -550,15 +549,15 @@ downloadImage()
 
             <div className=" grid  grid-cols-2 gap-3">
               <div>
-                <div className="bg-gradient-to-r from-[#003366] to-[#000337] min-h-[275px] rounded-md">
-                  <div className="w-full h-[200px] flex items-center justify-center">
+                <div className="bg-gradient-to-r from-[#003366] to-[#000337]  rounded-md">
+                  <div className=" flex items-center justify-center">
                     {previewImage && (
                       <Image
                         src={allValues.details.image}
                         alt=""
-                        width={1000}
-                        height={1000}
-                        className="object-contain w-full h-auto max-h-[200px] p-2"
+                        width={200}
+                        height={200}
+                        className="object-cover w-full h-[200px]  p-2"
                       />
                     )}
                   </div>
