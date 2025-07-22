@@ -23,7 +23,7 @@ const Input: React.FC<props> = (props) => {
         {props.label}
       </label>
       <input
-        className="text-white   text-sm outline-0 focus:border border-cyan-500 py-2  focus:px-2  rounded-md placeholder:text-gray-200 placeholder:capitalize"
+        className="text-white   text-sm outline-0 focus:border border-cyan-500 py-2  w-full  focus:px-2  rounded-md placeholder:text-gray-200 placeholder:capitalize"
         type={props.type}
         placeholder={props.placeholder}
         {...props.register(props.name)}

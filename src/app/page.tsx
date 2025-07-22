@@ -4,7 +4,7 @@ import FybForm from "./pages/fybForm";
 export default function Home() {
   return (
     <div>
-      <div className="min-h-screen bg-gradient-to-br from-[#003366] to-[#ffff] font-sans px-2  sm:px-6 py-10">
+      <div className="min-h-screen overflow-x-hidden bg-gradient-to-br from-[#003366] to-[#ffff] font-sans px-2  sm:px-6 py-10">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl text-[#000337] font-bold mb-4">

@@ -11,6 +11,7 @@ import {  useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormData, FormSchema } from '../schemas/schema';
 import GradBox from '../components/gradBox';
+import { downloadInstagramPost } from '../store/html2canv';
 // import { collection , addDoc } from 'firebase/firestore';
 // import { db } from '../store/fireStore';
  
@@ -130,12 +131,12 @@ const FybForm = () => {
     
       if (!posterRef.current) return console.log('empty');
 
-      const canvas = await html2canvas(posterRef.current);
-      //   , {
-      //   useCORS: true, // if you’re loading external images
-      //   backgroundColor: null,
-      //   scale: 2,
-      // });
+      const canvas = await html2canvas(posterRef.current
+        , {
+        useCORS: true, // if you’re loading external images
+        backgroundColor: null,
+        scale: 2,
+      });
 
       console.log('download')
 
@@ -144,9 +145,16 @@ const FybForm = () => {
       link.href = imgData;
       link.download = "FYB-Poster.png";
       link.click();
+      // if (navigator.userAgent.includes("iPhone")) {
+      //   window.open(imgData, "_blank");  
+      // } else {
+      //   link.click();  
+      // }
+
     };
   
   
+    const [file, setFile] = useState<File>()
     const allValues = form.watch();
     const allFilled = allValues.details
       ? Object.values(allValues.details).every(value => value !== '' && value !== undefined)
@@ -155,6 +163,8 @@ const FybForm = () => {
       const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
    const file = e.target.files?.[0];
    if (!file) return;
+
+   setFile(file)
 
 
    setImagePreview(URL.createObjectURL(file));
@@ -172,7 +182,7 @@ const FybForm = () => {
     
     const [preview, setPreview] = useState(false);
     const onSubmit = async (data: FormData) => {
-      alert("✅ submitted saved successfully");
+      // alert("✅ submitted saved successfully");
 //      try{
 //  const docRef = await addDoc(collection(db, 'fybData'), data)
 //  console.log('doc added with', docRef.id)
@@ -181,6 +191,11 @@ const FybForm = () => {
       
 //      }
 
+ 
+if (file) {
+  downloadInstagramPost("poster", file);
+
+}
 downloadImage()
       console.log(data.details)
       
@@ -213,17 +228,23 @@ downloadImage()
                   <div className="  sm:mb-5">
                     <div className="bg-gradient-to-r from-[#003366] to-[#000337] rounded-md">
                       <div>
-                        <div className="  flex items-center justify-center">
+                        <div className="flex h-[200px]   items-center justify-center">
                           {previewImage !== "" ? (
                             <Image
                               src={previewImage}
                               alt=""
-                              width={100}
+                              width={1000}
                               height={200}
-                              className=" p-2 object-fill w-full"
+                              className="object-cover  h-[200px] p-2"
                             />
                           ) : (
-                            <Image src={userImage} alt="" />
+                            <Image
+                              src={userImage}
+                              width={200}
+                              height={200}
+                              className=" object-contain"
+                              alt=""
+                            />
                           )}
 
                           <input
@@ -504,11 +525,11 @@ downloadImage()
         </footer>
       </div>
 
-      <div>
+      <div className=" absolute  opacity-0 -z-50 pointer-events-none">
         {/* className=" absolute left-[-9999px]" */}
         <div
           ref={posterRef}
-          className=" bg-[url('/images/fybBackground.png')]       w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 "
+          className=" bg-[url('/images/fybBackground.png')]        w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 "
         >
           <div className="  border-2 border-dotted border-[#000337] px-3 sm:px-7 rounded-2xl">
             <div className="    ">
@@ -529,15 +550,15 @@ downloadImage()
 
             <div className=" grid  grid-cols-2 gap-3">
               <div>
-                <div className="bg-gradient-to-r from-[#003366] to-[#000337] h-[275px] rounded-md">
-                  <div className="  flex items-center justify-center">
-                    {previewImage !== "" && (
+                <div className="bg-gradient-to-r from-[#003366] to-[#000337] min-h-[275px] rounded-md">
+                  <div className="w-full h-[200px] flex items-center justify-center">
+                    {previewImage && (
                       <Image
                         src={allValues.details.image}
                         alt=""
-                        width={100}
-                        height={300}
-                        className=" p-2  max-h-[300px] object-cotain w-full"
+                        width={1000}
+                        height={1000}
+                        className="object-contain w-full h-auto max-h-[200px] p-2"
                       />
                     )}
                   </div>
