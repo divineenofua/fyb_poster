@@ -194,7 +194,7 @@ const FybForm = () => {
       console.log(data.details);
     };
     return (
-      <div className="  overflow-x-hidden sm:m-7 my-7 mb-26">
+      <div className="  sm:m-7 my-7 mb-26">
         <div className=" bg-[url('/images/fybBackground.png')]  rounded-2xl    max-w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 ">
           <div className="  border-2 border-[#000337] border-dotted px-3 sm:px-7 rounded-2xl">
             <div className="    ">
