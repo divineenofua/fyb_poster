@@ -178,7 +178,7 @@ const FybForm = () => {
 
     const [preview, setPreview] = useState(false);
     const onSubmit = async (data: FormData) => {
-      // alert("✅ submitted saved successfully");
+      alert("✅ submitted saved successfully");
       //      try{
       //  const docRef = await addDoc(collection(db, 'fybData'), data)
       //  console.log('doc added with', docRef.id)
@@ -638,8 +638,8 @@ const FybForm = () => {
           </footer>
         </div>
         {/* className=" absolute left-[-9999px] opacity-0 -z-50" */}
-        <div >
-          <div className=" top-0     pointer-events-none   opacity-0 -z-50  ">
+        <div>
+          <div className=" absolute    pointer-events-none   opacity-0 -z-50  ">
             <div
               ref={posterRef}
               className=" bg-[url('/images/fybBackground.png')]        w-[595px] h-full   bg-no-repeat px-2 sm:px-5  py-4 "
