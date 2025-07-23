@@ -559,7 +559,7 @@ const BybForm = () => {
             <div className=" grid  grid-cols-2 gap-3">
               <div>
                 <div className="bg-gradient-to-r from-[#003366] to-[#000337] min-h-[275px] rounded-md">
-                  <div className="flex items-center justify-center h-[170px] relative top-2 p-2  overflow-clip">
+                  <div className="flex items-center justify-center h-[220px]  relative top-2 p-2  overflow-clip">
                     {previewImage && (
                       <Image
                         style={{
@@ -568,25 +568,31 @@ const BybForm = () => {
                         }}
                         src={allValues.details.image}
                         alt=""
-                        width={20}
-                        height={20}
-                        className="absolute
-                                           top-[calc((100% / 2) - 85px)] p-2 w-full h-max"
+                        // width={20}
+                        // height={20}
+                        // className="absolute
+                        //                    top-[calc((100% / 2) - 85px)] p-2 w-full h-max"
+
+                        width={1000}
+                        height={200}
+                        className="object-cove w-full r h-max p-2"
                       />
                     )}
                   </div>
-                  <GradBox
-                    styling="border-0 p-0 mb-0 bg-none h-0"
-                    stylingLabel="inline mr-4"
-                    label={formDetails[0].label}
-                    value={allValues?.details.name}
-                  />
-                  <GradBox
-                    styling="border-0 pb-[1px]  bg-none h-0"
-                    stylingLabel="inline mr-4"
-                    label={formDetails[1].label}
-                    value={allValues?.details.alias}
-                  />
+                  <div className=" flex items-center   mt-2 justify-between ">
+                    <GradBox
+                      styling="border-0 p-0 mb-0 bg-none h-0"
+                      stylingLabel="inline mr-4"
+                      label={formDetails[0].label}
+                      value={allValues?.details.name}
+                    />
+                    <GradBox
+                      styling="border-0 pb-[1px]  bg-none h-0"
+                      stylingLabel="inline mr-4"
+                      label={formDetails[1].label}
+                      value={allValues?.details.alias}
+                    />
+                  </div>
                 </div>
                 <div>
                   <GradBox
