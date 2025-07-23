@@ -662,7 +662,7 @@ const FybForm = () => {
                 <div className=" grid items-start  grid-cols-2   gap-3">
                   <div>
                     <div className="bg-gradient-to-r from-[#003366] to-[#000337]  rounded-md">
-                      <div className="flex items-center justify-center h-[170px] relative top-2 p-2  overflow-clip">
+                      {/* <div className="flex items-center justify-center h-[170px] relative top-2 p-2  overflow-clip">
                         {previewImage && (
                           <Image
                             style={{
@@ -677,7 +677,7 @@ const FybForm = () => {
                           top-[calc((100% / 2) - 85px)] p-2 w-full h-max"
                           />
                         )}
-                      </div>
+                      </div> */}
                       <GradBox
                         styling="border-0 p-0 mt-2 mb-0 bg-none h-0"
                         stylingLabel="inline mr-4"
