@@ -194,7 +194,7 @@ const FybForm = () => {
       console.log(data.details);
     };
     return (
-      <div className=" sm:m-7 my-7 mb-26">
+      <div className="  overflow-x-hidden sm:m-7 my-7 mb-26">
         <div className=" bg-[url('/images/fybBackground.png')]  rounded-2xl    max-w-[595px] h-full  sm:mx-auto  bg-no-repeat px-2 sm:px-5  py-4 ">
           <div className="  border-2 border-[#000337] border-dotted px-3 sm:px-7 rounded-2xl">
             <div className="    ">
@@ -638,149 +638,151 @@ const FybForm = () => {
           </footer>
         </div>
         {/* className=" absolute left-[-9999px] opacity-0 -z-50" */}
-        <div className=" fixed top-0     pointer-events-none  opacity-0 -z-50  ">
-          <div
-            ref={posterRef}
-            className=" bg-[url('/images/fybBackground.png')]        w-[595px] h-full   bg-no-repeat px-2 sm:px-5  py-4 "
-          >
-            <div className="  border-2 border-dotted border-[#000337] px-3 sm:px-7 rounded-2xl">
-              <div className="    ">
-                <div className=" flex justify-center gap-10 items-center pb-3 px-4 my-5  ">
-                  <div className="  max-w-[500px]">
-                    <Image className="w-full" src={logo3} alt="" />
-                  </div>
-                  <div className="  max-w-[500px]">
-                    <Image className="w-full" src={logo2} alt="" />
-                  </div>
-                  <div className="  max-w-[350px]">
-                    <Image className="w-full" src={logo1} alt="" />
-                  </div>
-                </div>
-              </div>
-
-              <div className=" grid items-start  grid-cols-2   gap-3">
-                <div>
-                  <div className="bg-gradient-to-r from-[#003366] to-[#000337]  rounded-md">
-                    <div className="flex items-center justify-center h-[170px] relative top-2 p-2  overflow-clip">
-                      {previewImage && (
-                        <Image
-                          style={{
-                            objectFit: "cover",
-                            objectPosition: "center",
-                          }}
-                          src={allValues.details.image}
-                          alt=""
-                          width={20}
-                          height={20}
-                          className="absolute
-                          top-[calc((100% / 2) - 85px)] p-2 w-full h-max"
-                        />
-                      )}
+        <div >
+          <div className=" top-0     pointer-events-none   opacity-0 -z-50  ">
+            <div
+              ref={posterRef}
+              className=" bg-[url('/images/fybBackground.png')]        w-[595px] h-full   bg-no-repeat px-2 sm:px-5  py-4 "
+            >
+              <div className="  border-2 border-dotted border-[#000337] px-3 sm:px-7 rounded-2xl">
+                <div className="    ">
+                  <div className=" flex justify-center gap-10 items-center pb-3 px-4 my-5  ">
+                    <div className="  max-w-[500px]">
+                      <Image className="w-full" src={logo3} alt="" />
                     </div>
-                    <GradBox
-                      styling="border-0 p-0 mt-2 mb-0 bg-none h-0"
-                      stylingLabel="inline mr-4"
-                      label={formDetails[0].label}
-                      value={allValues?.details.name}
-                    />
-                    <GradBox
-                      styling="border-0 pb-[1px]  bg-none h-0"
-                      stylingLabel="inline mr-4"
-                      label={formDetails[1].label}
-                      value={allValues?.details.alias}
-                    />
-                  </div>
-                  <div>
-                    <GradBox
-                      styling="my-[14px] "
-                      label={formDetails[2].label}
-                      value={allValues?.details.dob}
-                      stylingLabel="-top-2"
-                    />
-                  </div>
-                  <div>
-                    <GradBox
-                      label={formDetails[3].label}
-                      value={allValues?.details.handle}
-                      styling="mb-5"
-                      stylingLabel="-top-2"
-                    />
-                  </div>
-                  <div>
-                    <GradBox
-                      label={formDetails[4].label}
-                      value={allValues?.details.rs}
-                      styling="mb-5"
-                      stylingLabel="-top-2"
-                    />
+                    <div className="  max-w-[500px]">
+                      <Image className="w-full" src={logo2} alt="" />
+                    </div>
+                    <div className="  max-w-[350px]">
+                      <Image className="w-full" src={logo1} alt="" />
+                    </div>
                   </div>
                 </div>
 
-                <div>
+                <div className=" grid items-start  grid-cols-2   gap-3">
                   <div>
-                    <GradBox
-                      label={formDetails[5].label}
-                      value={allValues?.details.quote}
-                      styling="mb-6"
-                      stylingLabel="-top-2"
-                    />
+                    <div className="bg-gradient-to-r from-[#003366] to-[#000337]  rounded-md">
+                      <div className="flex items-center justify-center h-[170px] relative top-2 p-2  overflow-clip">
+                        {previewImage && (
+                          <Image
+                            style={{
+                              objectFit: "cover",
+                              objectPosition: "center",
+                            }}
+                            src={allValues.details.image}
+                            alt=""
+                            width={20}
+                            height={20}
+                            className="absolute
+                          top-[calc((100% / 2) - 85px)] p-2 w-full h-max"
+                          />
+                        )}
+                      </div>
+                      <GradBox
+                        styling="border-0 p-0 mt-2 mb-0 bg-none h-0"
+                        stylingLabel="inline mr-4"
+                        label={formDetails[0].label}
+                        value={allValues?.details.name}
+                      />
+                      <GradBox
+                        styling="border-0 pb-[1px]  bg-none h-0"
+                        stylingLabel="inline mr-4"
+                        label={formDetails[1].label}
+                        value={allValues?.details.alias}
+                      />
+                    </div>
+                    <div>
+                      <GradBox
+                        styling="my-[14px] "
+                        label={formDetails[2].label}
+                        value={allValues?.details.dob}
+                        stylingLabel="-top-2"
+                      />
+                    </div>
+                    <div>
+                      <GradBox
+                        label={formDetails[3].label}
+                        value={allValues?.details.handle}
+                        styling="mb-5"
+                        stylingLabel="-top-2"
+                      />
+                    </div>
+                    <div>
+                      <GradBox
+                        label={formDetails[4].label}
+                        value={allValues?.details.rs}
+                        styling="mb-5"
+                        stylingLabel="-top-2"
+                      />
+                    </div>
                   </div>
+
                   <div>
-                    <GradBox
-                      label={formDetails[6].label}
-                      value={allValues?.details.level}
-                      styling="mb-5"
-                      stylingLabel="-top-2"
-                    />
-                  </div>
-                  <div>
-                    <GradBox
-                      label={formDetails[7].label}
-                      value={allValues?.details.course}
-                      styling="mb-5"
-                      stylingLabel="-top-2"
-                    />
-                  </div>
-                  <div>
-                    <GradBox
-                      label={formDetails[8].label}
-                      value={allValues?.details.lecturer}
-                      styling="mb-5"
-                      stylingLabel="-top-2"
-                    />
-                  </div>
-                  <div>
-                    <GradBox
-                      label={formDetails[9].label}
-                      value={allValues?.details.alternateCourse}
-                      styling="mb-5"
-                      stylingLabel="-top-2"
-                    />
-                  </div>
-                  <div>
-                    <GradBox
-                      label={formDetails[10].label}
-                      value={allValues?.details.missMost}
-                      styling="mb-5"
-                      stylingLabel="-top-2"
-                    />
-                  </div>
-                  <div>
-                    <GradBox
-                      label={formDetails[11].label}
-                      value={allValues?.details.clique}
-                      styling="mb-5"
-                      stylingLabel="-top-2"
-                    />
+                    <div>
+                      <GradBox
+                        label={formDetails[5].label}
+                        value={allValues?.details.quote}
+                        styling="mb-6"
+                        stylingLabel="-top-2"
+                      />
+                    </div>
+                    <div>
+                      <GradBox
+                        label={formDetails[6].label}
+                        value={allValues?.details.level}
+                        styling="mb-5"
+                        stylingLabel="-top-2"
+                      />
+                    </div>
+                    <div>
+                      <GradBox
+                        label={formDetails[7].label}
+                        value={allValues?.details.course}
+                        styling="mb-5"
+                        stylingLabel="-top-2"
+                      />
+                    </div>
+                    <div>
+                      <GradBox
+                        label={formDetails[8].label}
+                        value={allValues?.details.lecturer}
+                        styling="mb-5"
+                        stylingLabel="-top-2"
+                      />
+                    </div>
+                    <div>
+                      <GradBox
+                        label={formDetails[9].label}
+                        value={allValues?.details.alternateCourse}
+                        styling="mb-5"
+                        stylingLabel="-top-2"
+                      />
+                    </div>
+                    <div>
+                      <GradBox
+                        label={formDetails[10].label}
+                        value={allValues?.details.missMost}
+                        styling="mb-5"
+                        stylingLabel="-top-2"
+                      />
+                    </div>
+                    <div>
+                      <GradBox
+                        label={formDetails[11].label}
+                        value={allValues?.details.clique}
+                        styling="mb-5"
+                        stylingLabel="-top-2"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <footer className="text-[#000337]  py-3 font-bold  text-center ">
-              {" "}
-              Mariners!!! Ahoy!!!
-            </footer>
+              <footer className="text-[#000337]  py-3 font-bold  text-center ">
+                {" "}
+                Mariners!!! Ahoy!!!
+              </footer>
+            </div>
           </div>
         </div>
       </div>
