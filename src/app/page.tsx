@@ -1,4 +1,5 @@
-import FybForm from "./pages/fybForm";
+import BybForm from "./pages/form";
+// import FybForm from "./pages/fybForm";
 
  
 export default function Home() {
@@ -21,7 +22,8 @@ export default function Home() {
           <h3 className="text-xl font-bold mb-4  text-white text-center">
             Let’s create yours 👇
           </h3>
-          <FybForm />
+          {/* <FybForm /> */}
+          <BybForm />
         </section>
 
         {/* Footer */}
