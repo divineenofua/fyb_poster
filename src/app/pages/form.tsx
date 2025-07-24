@@ -572,8 +572,7 @@ const BybForm = () => {
                         // height={20}
                         // className="absolute
                         //                    top-[calc((100% / 2) - 85px)] p-2 w-full h-max"
-
-                        width={1000}
+width={1000}
                         height={200}
                         className="object-cove w-full r h-max p-2"
                       />
