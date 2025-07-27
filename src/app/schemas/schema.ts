@@ -19,5 +19,5 @@ export const FormDataSchema = z.object({
 export const FormSchema = z.object({
   details:FormDataSchema,
 });
-export type FormData = z.infer<typeof FormSchema>
+export type FormData =z.infer<typeof FormSchema>
 export type FormDataReturn = z.infer<typeof FormDataSchema>;
