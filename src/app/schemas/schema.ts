@@ -13,7 +13,7 @@ export const FormDataSchema = z.object({
   lecturer: z.string().min(1, "field is required"),
   alternateCourse: z.string().min(1, "field is required"),
   missMost: z.string().min(1, "field is required"),
-  clique: z.string().min(1, "field is required"),
+  clique:z.string().min(1, "field is required"),
 });
 
 export const FormSchema = z.object({
