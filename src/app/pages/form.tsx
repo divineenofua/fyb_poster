@@ -541,7 +541,7 @@ const BybForm = () => {
         >
           <div className="  border-2 border-dotted border-[#000337] px-3 sm:px-7 rounded-2xl">
             <div className="    ">
-              <div className=" flex justify-center gap-10 items-center pb-3 px-4 my-5  ">
+              <div className="flex justify-center gap-10 items-center pb-3 px-4 my-5  ">
                 <div className="  max-w-[500px]">
                   <Image className="w-full" src={logo3} alt="" />
                 </div>
